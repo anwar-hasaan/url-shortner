@@ -1,0 +1,93 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: cornflowerblue;
+    font-family: sans-serif;
+}
+.main-form{
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    text-align: center;
+}
+.main-form h1{
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 25px 0;
+    text-transform: uppercase;
+    color: aliceblue;
+}
+.main-form .inp{
+    font-size: 16px;
+    width: 90%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+}
+.main-form .button{
+    width: 50%;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+}
+.main-form .button:hover{
+    width: 51%;
+    font-size: 17px;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+
+.content{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    background-color: aqua;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px;
+    color: rgb(70, 117, 204);
+}
+.main-url span{
+    text-decoration: underline;
+}
+.copy-btn{
+    width: 25%;
+    font-size: 14px;
+    padding: 5px;
+    background-color: rgb(70, 117, 204);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.copy-btn:hover{
+    width: 30%;
+}
+.info{
+    font-size: 12px;
+    margin-top: 2px;
+}
+.messages{
+    background-color: aqua;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.alert{
+    color: rgb(70, 117, 204);;
+    text-align: center;
+}
+
+@media only screen and (min-width: 600px){
+    .main-form{
+        width: 50%;
+    }
+}
