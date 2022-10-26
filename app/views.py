@@ -6,6 +6,9 @@ from .models import URL
 def home(request):
     if request.method == 'POST':
         given_url = request.POST.get('main_url')
+        if len(given_url) < 7:
+            messages.error(request, 'Invalid URL')
+            return render(request, 'home.html') 
         try:
             for i in range(0, 5):
                 random_chars = BaseUserManager().make_random_password(5)

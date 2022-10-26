@@ -7,24 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URL Shortner</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
-
-    
+    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTISrclSau-Oii_hD_SJhO8GHZLtIiEcR6wEEb0g-QbASY__ae_owYI4TrViuYwPJHLqKQ&usqp=CAU">
 </head>
 <body>
     
-    {% if messages %}
-    {% for message in messages %}
     <div class="messages">
-        <h4 class="alert">{{message}}</h4>
+        <h4 class="alert">
+            {% if messages %}
+            {% for message in messages %}
+                {{message}}
+            {% endfor %}
+            {% endif %}
+        </h4>
     </div>
-    {% endfor %}
-    {% endif %}
     
     <div class="container main-form">
         <form action="" method="post">
             <h1>URL Shortner</h1>
             {% csrf_token %}
-            <input type="text" name="main_url" placeholder="Enter your URL here" class="inp">
+            <input type="text" name="main_url" placeholder="Enter your URL here" class="inp" required>
             <input type="submit" value="Short URL" class="button">
         </form>
 
